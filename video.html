@@ -1,10 +1,18 @@
 <html>
   <head>
     <title>Hi Crush</title>
+    <script src="video.js"></script>
   </head>
-  <video width="500" height="auto" autoplay>
+  <div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br><br>
+  <video id="video1" width="1000" autoplay>
     <source src="./static/crush.mp4" type="video/mp4">
     <source src="./static/crush.ogg" type="video/ogg">
-    Your browser does not support the video tag.
+    Your browser does not support HTML video.
   </video>
+</div>
 </html>
