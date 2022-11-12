@@ -1,18 +1,45 @@
 <html>
   <head>
     <title>Hi Crush</title>
-    <script src="video.js"></script>
+    
+    <script> 
+      var myVideo = document.getElementById("video1"); 
+      
+      function playPause() { 
+        if (myVideo.paused) 
+          myVideo.play(); 
+        else 
+          myVideo.pause(); 
+      } 
+      
+      function makeBig() { 
+          myVideo.width = 560; 
+      } 
+      
+      function makeSmall() { 
+          myVideo.width = 320; 
+      } 
+      
+      function makeNormal() { 
+          myVideo.width = 420; 
+      } 
+      </script>
   </head>
-  <div style="text-align:center"> 
-  <button onclick="playPause()">Play/Pause</button> 
-  <button onclick="makeBig()">Big</button>
-  <button onclick="makeSmall()">Small</button>
-  <button onclick="makeNormal()">Normal</button>
-  <br><br>
-  <video id="video1" width="1000" autoplay>
-    <source src="./static/crush.mp4" type="video/mp4">
-    <source src="./static/crush.ogg" type="video/ogg">
-    Your browser does not support HTML video.
-  </video>
-</div>
+  
+  <body>
+    <div style="text-align:center"> 
+      <button onclick="playPause()">Play/Pause</button> 
+      <button onclick="makeBig()">Big</button>
+      <button onclick="makeSmall()">Small</button>
+      <button onclick="makeNormal()">Normal</button>
+      <br><br>
+      <video id="video1" width="1000" autoplay>
+        <source src="./static/crush.mp4" type="video/mp4">
+        <source src="./static/crush.ogg" type="video/ogg">
+        Your browser does not support HTML video.
+      </video>
+    </div>
+  </body>  
+
+
 </html>
